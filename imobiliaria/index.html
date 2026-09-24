@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credmobiliaria — Imóveis com Credibilidade</title>
+  <meta name="description" content="Credmobiliaria: compra, venda, locação e consultoria de imóveis de alto padrão. Encontre o lar dos seus sonhos com segurança e transparência." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0e17'/%3E%3Ctext x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' fill='%23d4a94e' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Barra de progresso -->
+  <div class="progress" id="progress"></div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo">
+      <span class="preloader__letter">C</span>
+      <span class="preloader__letter">r</span>
+      <span class="preloader__letter">e</span>
+      <span class="preloader__letter">d</span>
+      <span class="preloader__letter">m</span>
+      <span class="preloader__letter">o</span>
+      <span class="preloader__letter">b</span>
+      <span class="preloader__letter">i</span>
+      <span class="preloader__letter">l</span>
+      <span class="preloader__letter">i</span>
+      <span class="preloader__letter">a</span>
+      <span class="preloader__letter">r</span>
+      <span class="preloader__letter">i</span>
+      <span class="preloader__letter">a</span>
+    </div>
+    <div class="preloader__bar"><span id="preloaderFill"></span></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <span class="navbar__mark">C</span>
+        <span class="navbar__name">Cred<span>mobiliaria</span></span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#home" class="navbar__link">Início</a>
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="#servicos" class="navbar__link">Serviços</a>
+        <a href="#imoveis" class="navbar__link">Imóveis</a>
+        <a href="#depoimentos" class="navbar__link">Depoimentos</a>
+        <a href="#contato" class="navbar__link">Contato</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#contato" class="btn btn--gold btn--sm">Fale conosco</a>
+        <button class="navbar__burger" id="navBurger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" id="heroBg">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop" alt="Casa moderna de luxo" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__badge" data-hero>
+        <span class="dot"></span> Creci ativo &nbsp;&middot;&nbsp; +10 anos de mercado
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__line" data-hero-line>Encontre o lar</span>
+        <span class="hero__line hero__line--gold" data-hero-line>que você merece</span>
+      </h1>
+
+      <p class="hero__subtitle" data-hero>
+        A <strong>Credmobiliaria</strong> conecta você aos melhores imóveis da região
+        com segurança, transparência e um atendimento que você sente de perto.
+      </p>
+
+      <div class="hero__cta" data-hero>
+        <a href="#imoveis" class="btn btn--gold btn--lg">
+          Ver imóveis
+          <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+        <a href="#contato" class="btn btn--ghost btn--lg">Agendar visita</a>
+      </div>
+
+      <div class="hero__stats" data-hero-stats>
+        <div class="hero-stat">
+          <span class="hero-stat__num" data-count="1200">0</span><span class="hero-stat__plus">+</span>
+          <p>Imóveis vendidos</p>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num" data-count="98">0</span><span class="hero-stat__plus">%</span>
+          <p>Clientes satisfeitos</p>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num" data-count="10">0</span><span class="hero-stat__plus"> anos</span>
+          <p>De experiência</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+      <span class="hero__scroll-mouse"><span></span></span>
+      Role para explorar
+    </a>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" id="marquee">
+    <div class="marquee__track" id="marqueeTrack">
+      <div class="marquee__group">
+        <span>Compra</span><i>&#10022;</i><span>Venda</span><i>&#10022;</i><span>Locação</span><i>&#10022;</i>
+        <span>Financiamento</span><i>&#10022;</i><span>Avaliação</span><i>&#10022;</i><span>Consultoria</span><i>&#10022;</i>
+        <span>Investimento</span><i>&#10022;</i><span>Permuta</span><i>&#10022;</i>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span>Compra</span><i>&#10022;</i><span>Venda</span><i>&#10022;</i><span>Locação</span><i>&#10022;</i>
+        <span>Financiamento</span><i>&#10022;</i><span>Avaliação</span><i>&#10022;</i><span>Consultoria</span><i>&#10022;</i>
+        <span>Investimento</span><i>&#10022;</i><span>Permuta</span><i>&#10022;</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre section" id="sobre">
+    <div class="container sobre__grid">
+      <div class="sobre__visual" data-reveal>
+        <div class="sobre__img sobre__img--main">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1974&auto=format&fit=crop" alt="Equipe da Credmobiliaria" />
+        </div>
+        <div class="sobre__img sobre__img--float" data-parallax data-parallax-speed="-30">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Interior de imóvel moderno" />
+        </div>
+        <div class="sobre__exp">
+          <strong>10+</strong>
+          <span>anos de<br />mercado</span>
+        </div>
+      </div>
+
+      <div class="sobre__content">
+        <span class="tag" data-reveal>Quem somos</span>
+        <h2 class="section__title" data-reveal>
+          Credibilidade no nome,<br /><em>confiança em cada negócio.</em>
+        </h2>
+        <p data-reveal>
+          A <strong>Credmobiliaria</strong> nasceu para transformar a experiência de
+          comprar, vender ou alugar um imóvel. Cuidamos de cada etapa — da avaliação
+          à assinatura — com técnica, ética e proximidade.
+        </p>
+
+        <ul class="sobre__list">
+          <li data-reveal>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><strong>Documentação rigorosa</strong><p>Todo imóvel e contrato verificados por especialistas.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><strong>Avaliação justa de mercado</strong><p>Preço certo para vender rápido ou alugar sem prejuízo.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><strong>Acompanhamento total</strong><p>Você nunca fica sozinho: um consultor dedicado do início ao fim.</p></div>
+          </li>
+        </ul>
+
+        <a href="#contato" class="btn btn--gold" data-reveal>Vamos conversar
+          <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="servicos section" id="servicos">
+    <div class="container">
+      <div class="section__head">
+        <span class="tag" data-reveal>Nossos serviços</span>
+        <h2 class="section__title" data-reveal>Tudo que seu imóvel <em>precisa</em></h2>
+        <p class="section__desc" data-reveal>
+          Soluções completas em imóveis, do primeiro contato até a entrega das chaves.
+        </p>
+      </div>
+
+      <div class="servicos__grid">
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">01</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <h3>Compra de Imóveis</h3>
+          <p>Curadoria de imóveis exclusivos com negociação inteligente e total segurança jurídica.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">02</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><path d="M7.5 7.5h.01"/></svg>
+          </div>
+          <h3>Venda</h3>
+          <p>Marketing profissional, fotos de alto padrão e rede de compradores qualificados.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">03</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
+          </div>
+          <h3>Locação</h3>
+          <p>Inquilinos verificados, contratos blindados e gestão completa do seu aluguel.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">04</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v-4M12 15V8M17 15v-6"/></svg>
+          </div>
+          <h3>Avaliação</h3>
+          <p>Relatório de valor de mercado preciso, com dados reais da sua região.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">05</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10M20 21V10M8 21V10M12 21V10M16 21V10M2 10l10-6 10 6"/></svg>
+          </div>
+          <h3>Financiamento</h3>
+          <p>Parceria com os principais bancos e as melhores condições de crédito.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+
+        <article class="serv-card" data-reveal>
+          <span class="serv-card__num">06</span>
+          <div class="serv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Consultoria</h3>
+          <p>Estratégia de investimento patrimonial para fazer seu dinheiro valer mais.</p>
+          <a href="#contato" class="serv-card__link">Saiba mais <span class="mini-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMÓVEIS ===== -->
+  <section class="imoveis section" id="imoveis">
+    <div class="container">
+      <div class="section__head section__head--row">
+        <div>
+          <span class="tag" data-reveal>Destaque</span>
+          <h2 class="section__title" data-reveal>Imóveis <em>exclusivos</em></h2>
+        </div>
+        <a href="#contato" class="btn btn--ghost" data-reveal>Ver catálogo completo</a>
+      </div>
+
+      <div class="imoveis__grid">
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1613490493576-583e61143d3d?q=80&w=1974&auto=format&fit=crop" alt="Casa moderna com piscina" />
+            <span class="imovel-card__badge imovel-card__badge--venda">Venda</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 4 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 3 suítes</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 2 vagas</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Bonfim Paulista, Ribeirão Preto
+            </span>
+            <h3>Casa Residencial Bonfim</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 1.850<span>,</span>000</strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1974&auto=format&fit=crop" alt="Apartamento de luxo" />
+            <span class="imovel-card__badge imovel-card__badge--aluguel">Aluguel</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 3 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 1 suíte</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 1 vaga</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Jardim Sumaré, Ribeirão Preto
+            </span>
+            <h3>Apartamento Vista Sumaré</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 3.200<span>/mês</span></strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2020&auto=format&fit=crop" alt="Casa com piscina e jardim" />
+            <span class="imovel-card__badge imovel-card__badge--venda">Venda</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 5 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 4 suítes</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 4 vagas</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Alto da Serra, Ribeirão Preto
+            </span>
+            <h3>Casa Alto da Serra dos Lagos</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 2.400<span>,</span>000</strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" alt="Cobertura moderna" />
+            <span class="imovel-card__badge imovel-card__badge--venda">Venda</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 3 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 2 suítes</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 2 vagas</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Vila Virgínia, Ribeirão Preto
+            </span>
+            <h3>Cobertura Virgínia Skyline</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 3.100<span>,</span>000</strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop" alt="Sobrado moderno" />
+            <span class="imovel-card__badge imovel-card__badge--aluguel">Aluguel</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 2 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 1 suíte</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 1 vaga</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Jardim América, Ribeirão Preto
+            </span>
+            <h3>Sobrado Jardim América Living</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 2.450<span>/mês</span></strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="imovel-card" data-reveal>
+          <div class="imovel-card__media">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2092&auto=format&fit=crop" alt="Apartamento compacto moderno" />
+            <span class="imovel-card__badge imovel-card__badge--venda">Venda</span>
+            <div class="imovel-card__features">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5v14M2 10h18a2 2 0 0 1 2 2v7M2 17h20M6 10V7h6v3"/></svg> 2 quartos</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3zM6 12V5a2 2 0 0 1 2-2h8"/></svg> 1 banheiro</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> 1 vaga</span>
+            </div>
+          </div>
+          <div class="imovel-card__body">
+            <span class="imovel-card__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Centro, Ribeirão Preto
+            </span>
+            <h3>Apto Studio Centro RP</h3>
+            <div class="imovel-card__price">
+              <strong>R$ 420<span>,</span>000</strong>
+              <a href="#contato" class="btn btn--sm btn--gold">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FAIXA ===== -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <div class="cta__img" data-parallax data-parallax-speed="40">
+        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57ab61?q=80&w=2070&auto=format&fit=crop" alt="Chaves de imóvel" />
+      </div>
+      <div class="cta__content">
+        <h2 data-reveal>Quer vender ou alugar<br />seu imóvel <em>rápido?</em></h2>
+        <p data-reveal>Fazemos uma avaliação gratuita e um plano de divulgação sob medida para o seu imóvel.</p>
+        <div class="cta__actions" data-reveal>
+          <a href="#contato" class="btn btn--gold btn--lg">Avaliação gratuita</a>
+          <a href="https://wa.me/5516996023164" target="_blank" class="btn btn--dark btn--lg">WhatsApp direto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="depoimentos section" id="depoimentos">
+    <div class="container">
+      <div class="section__head">
+        <span class="tag" data-reveal>Depoimentos</span>
+        <h2 class="section__title" data-reveal>Quem confia, <em>recomenda</em></h2>
+      </div>
+
+      <div class="depoimentos__grid">
+        <figure class="depo-card" data-reveal>
+          <div class="depo-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <blockquote>
+            "Vendi meu apartamento em menos de 40 dias pelo preço que pedi. Equipe da
+            Credmobiliaria é impecável do começo ao fim."
+          </blockquote>
+          <figcaption>
+            <img src="https://i.pravatar.cc/100?img=32" alt="Cliente Marcos A." />
+            <div><strong>Marcos A.</strong><span>Vendeu no Bonfim Paulista</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="depo-card" data-reveal>
+          <div class="depo-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <blockquote>
+            "Primeira vez comprando imóvel e fui orientada em cada detalhe do
+            financiamento. Me senti segura o tempo todo."
+          </blockquote>
+          <figcaption>
+            <img src="https://i.pravatar.cc/100?img=47" alt="Cliente Juliana R." />
+            <div><strong>Juliana R.</strong><span>Comprou no Centro de RP</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="depo-card" data-reveal>
+          <div class="depo-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <blockquote>
+            "Alugo meus imóveis com eles há 5 anos. Inquilino sempre certeiro e
+            pagamento sempre em dia. Recomendo de olhos fechados."
+          </blockquote>
+          <figcaption>
+            <img src="https://i.pravatar.cc/100?img=12" alt="Cliente Carlos M." />
+            <div><strong>Carlos M.</strong><span>Proprietário investidor</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="contato section" id="contato">
+    <div class="container contato__grid">
+      <div class="contato__info">
+        <span class="tag" data-reveal>Contato</span>
+        <h2 class="section__title" data-reveal>Vamos fechar seu<br />próximo <em>negócio?</em></h2>
+        <p data-reveal>
+          Preencha o formulário ou chame no WhatsApp. Um consultor da
+          Credmobiliaria responde em até 1 hora em horário comercial.
+        </p>
+
+        <ul class="contato__list">
+          <li data-reveal>
+            <span class="contato__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <div><strong>Endereço</strong><p>Av. Principal, 1000 — Sala 42<br />Ribeirão Preto/SP</p></div>
+          </li>
+          <li data-reveal>
+            <span class="contato__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div><strong>Telefone / WhatsApp</strong><p>(16) 99602-3164</p></div>
+          </li>
+          <li data-reveal>
+            <span class="contato__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </span>
+            <div><strong>E-mail</strong><p>contato@credmobiliaria.com.br</p></div>
+          </li>
+          <li data-reveal>
+            <span class="contato__ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <div><strong>Horário</strong><p>Seg a Sex — 9h às 18h<br />Sáb — 9h às 13h</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contato__form" id="formContato" data-reveal>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-field">
+            <label for="tel">WhatsApp</label>
+            <input type="tel" id="tel" name="tel" placeholder="(16) 99602-3164" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="interesse">Tenho interesse em</label>
+          <select id="interesse" name="interesse">
+            <option>Comprar um imóvel</option>
+            <option>Vender meu imóvel</option>
+            <option>Alugar um imóvel</option>
+            <option>Colocar meu imóvel para alugar</option>
+            <option>Avaliação gratuita</option>
+            <option>Investimento</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="msg">Mensagem</label>
+          <textarea id="msg" name="msg" rows="4" placeholder="Conte um pouco do que você procura..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--lg btn--full">Enviar mensagem
+          <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </button>
+        <p class="form-note">Seus dados estão seguros. Sem spam, nunca.</p>
+        <div class="form-success" id="formSuccess"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Mensagem enviada! Em breve entraremos em contato.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="navbar__logo">
+          <span class="navbar__mark">C</span>
+          <span class="navbar__name">Cred<span>mobiliaria</span></span>
+        </a>
+        <p>Imóveis com credibilidade. Compra, venda, locação e consultoria com a segurança que o seu patrimônio merece.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.4v7z"/></svg>
+          </a>
+          <a href="https://wa.me/5516996023164" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.41 15.13L2 22l5.05-1.57A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.13 15.1l-.3-.17-2.99.93.94-2.9-.18-.3A8.1 8.1 0 0 1 12.04 3.8zm-3.4 4.2c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.34 1 2.5c.12.16 1.7 2.7 4.18 3.68 2.47.97 2.47.65 2.92.61.45-.04 1.45-.6 1.66-1.17.2-.57.2-1.06.14-1.17-.06-.1-.22-.16-.47-.28-.24-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.44.12-.16.16-.28.24-.44.08-.16.04-.3-.02-.42-.06-.12-.55-1.3-.75-1.78-.2-.47-.4-.4-.55-.4z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Serviços</h4>
+        <a href="#servicos">Compra</a>
+        <a href="#servicos">Venda</a>
+        <a href="#servicos">Locação</a>
+        <a href="#servicos">Financiamento</a>
+        <a href="#servicos">Consultoria</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <a href="tel:+5516996023164">(16) 99602-3164</a>
+        <a href="mailto:contato@credmobiliaria.com.br">contato@credmobiliaria.com.br</a>
+        <a href="#contato">Av. Principal, 1000 — Ribeirão Preto/SP</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© <span id="ano"></span> Credmobiliaria. Todos os direitos reservados.</p>
+        <p>Creci 0000-J</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5516996023164" target="_blank" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.41 15.13L2 22l5.05-1.57A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.13 15.1l-.3-.17-2.99.93.94-2.9-.18-.3A8.1 8.1 0 0 1 12.04 3.8zm-3.4 4.2c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.34 1 2.5c.12.16 1.7 2.7 4.18 3.68 2.47.97 2.47.65 2.92.61.45-.04 1.45-.6 1.66-1.17.2-.57.2-1.06.14-1.17-.06-.1-.22-.16-.47-.28-.24-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.44.12-.16.16-.28.24-.44.08-.16.04-.3-.02-.42-.06-.12-.55-1.3-.75-1.78-.2-.47-.4-.4-.55-.4z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
